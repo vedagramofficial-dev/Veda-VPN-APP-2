@@ -1,0 +1,16 @@
+plugins { id 'com.android.application' }
+
+def requestedVersionCode = (project.findProperty('versionCode') ?: '3').toString().toInteger()
+def requestedVersionName = (project.findProperty('versionName') ?: '0.3.0').toString()
+
+android {
+    namespace 'com.veda.vpn'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.veda.vpn'
+        minSdk 24
+        targetSdk 35
+        versionCode requestedVersionCode
+        versionName requestedVersionName
+    }
+}
